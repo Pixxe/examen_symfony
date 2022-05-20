@@ -1,0 +1,39 @@
+{% extends 'base-front.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Détails du produit {{ product.name }}</h1>
+<div class="container">
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <td>Nom</td>
+            <td>Créé le</td>
+            <td>Actif</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                {{ product.name }}
+            </td>
+            <td>
+                {{ product.createdAt |date }}
+            </td>
+            <td>
+                {{ product.isActive }}
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+
+    <a class="btn btn-primary" href="{{ path('app_product') }}">Retour a ma page produit</a>
+
+{% endblock %}
+

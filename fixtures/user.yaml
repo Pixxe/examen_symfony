@@ -1,0 +1,13 @@
+App\Entity\User:
+  user1:
+    email: '<email()>'
+    roles: [ "ROLE_ADMIN" ]
+    password: "\\$2y\\$13\\$wAgjPRRLwTX5tHEfuKV0auwLDggLGdYlaf177C8AZEl9vMd9gDXHS"
+
+
+  user{2..10}:
+    email: '<email()>'
+    roles: [ "ROLE_USER" ]
+    password: "\\$2y\\$13\\$UNIAnH5CHaUzaCXRmWbkaO5SdB1x1wQ7FdB6WyrIp3oSFUExGdoUK"
+
+

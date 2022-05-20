@@ -1,0 +1,7 @@
+App\Entity\Product:
+  product{1..20}:
+    name: '<word()>'
+    createdAt: '<dateTimeBetween("-365 days", "now")>'
+    imagePath: 'text.jpg'
+    isActive: '<numberBetween(1,3)>'
+    createdBy: '@user*'

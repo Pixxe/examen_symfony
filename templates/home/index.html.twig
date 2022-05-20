@@ -1,0 +1,30 @@
+{% extends 'base-front.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <h3 class="text-center">Liste des produits</h3>
+    <div class="container">
+    <table class="table table-dark table-striped">
+        <tr>
+            <td>Nom du produit</td>
+            <td>Créé le</td>
+            <td>Actif</td>
+        </tr>
+
+
+    {%  for product in pagination %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.createdAt |date }}</td>
+            <td>{{ product.isActive }}</td>
+        </tr>
+
+    {% endfor %}
+        <div class="pagination">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </table>
+    </div>
+{% endblock %}
